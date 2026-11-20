@@ -1,0 +1,59 @@
+/* 全ページで共通のデザイン */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  color: #223645;
+  background: #f4f2ec;
+  font-family: "Yu Gothic", "Meiryo", sans-serif;
+  line-height: 1.9;
+}
+a { color: #155c7a; text-underline-offset: 4px; }
+a:focus-visible { outline: 3px solid #dd6948; outline-offset: 4px; }
+.site-header {
+  background: #163d53;
+  color: white;
+  padding: 48px 24px 30px;
+  text-align: center;
+  border-bottom: 6px solid #dd6948;
+}
+.eyebrow { font-size: 13px; letter-spacing: .2em; color: #b9d8e4; }
+h1 { font-size: clamp(28px, 5vw, 44px); line-height: 1.45; margin: 12px 0; }
+.tagline { margin: 0 0 22px; color: #d6e6ed; }
+nav { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+nav a {
+  color: white;
+  border: 1px solid #83a6b8;
+  border-radius: 24px;
+  text-decoration: none;
+  padding: 6px 20px;
+}
+nav a:hover, nav a[aria-current="page"] { background: white; color: #163d53; }
+main { max-width: 1000px; margin: auto; padding: 30px 20px 50px; }
+.panel, .spot {
+  background: white;
+  padding: 28px;
+  border: 1px solid #dce3e3;
+  border-radius: 12px;
+  margin-bottom: 24px;
+}
+h2 { margin: 0 0 18px; padding-left: 14px; border-left: 5px solid #dd6948; font-size: 24px; }
+h3 { color: #174e68; margin: 0 0 10px; }
+p { margin: 12px 0; overflow-wrap: anywhere; }
+.photo { margin: 0; }
+.photo img { display: block; width: 100%; max-height: 600px; object-fit: contain; background: #edf2f3; border-radius: 8px; }
+figcaption { margin-top: 12px; font-size: 14px; color: #526775; }
+.credit { font-size: 12px; color: #526775; }
+.video-frame { position: relative; padding-top: 56.25%; margin-top: 18px; background: #102d40; border-radius: 8px; overflow: hidden; }
+.video-frame iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+.button { display: inline-block; color: white; background: #b84d2e; padding: 11px 22px; border-radius: 7px; text-decoration: none; margin-top: 10px; }
+.button:hover { background: #943e26; }
+.highlights { padding-left: 24px; }
+.spot .label { font-size: 12px; letter-spacing: .15em; color: #657987; margin-top: 0; }
+.photo-tip { background: #edf5f6; padding: 14px 18px; border-radius: 6px; }
+.site-footer { background: #163d53; color: #d6e6ed; text-align: center; padding: 25px 20px; font-size: 13px; }
+@media (max-width: 600px) {
+  .site-header { padding: 32px 18px 25px; }
+  main { padding: 22px 14px 35px; }
+  .panel, .spot { padding: 21px 18px; }
+  h2 { font-size: 21px; }
+}
